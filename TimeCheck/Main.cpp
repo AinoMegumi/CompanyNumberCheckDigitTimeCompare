@@ -20,7 +20,7 @@ void self() {
             const std::chrono::time_point<std::chrono::system_clock> start = std::chrono::system_clock::now();
             const unsigned long CheckDigit = calc(Target[i]);
             const std::chrono::time_point<std::chrono::system_clock> last = std::chrono::system_clock::now();
-            times[i] = std::chrono::duration_cast<std::chrono::nanoseconds>(last - start).count();
+            times[i] += std::chrono::duration_cast<std::chrono::nanoseconds>(last - start).count();
             CheckDigits1.push_back(CheckDigit);
         }
     }
